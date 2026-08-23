@@ -5,6 +5,11 @@ Deploy OpenSMTPD applications on Kubernetes with Wodby.
 This repository defines the Wodby stack manifests and default service
 composition for OpenSMTPD.
 
+<!-- wodby:generated:start -->
+
+## Stack contract
+
+- [OpenSMTPD stack on Wodby](https://wodby.com/stacks/opensmtpd)
 - [Browse Wodby application stacks](https://wodby.com/stacks)
 - [OpenSMTPD stack guide](https://wodby.com/docs/2.0/stacks/catalog/opensmtpd/)
 - [Wodby stack documentation](https://wodby.com/docs/2.0/stacks/)
@@ -24,6 +29,14 @@ Enabled optional services are selected by default but can be excluded when an
 app is created. Disabled optional services are available but not selected by
 default. Required services cannot be excluded.
 
+## Validate the stack manifest
+
+```bash
+wodby stack validate-manifest stack.yml --org <org-id>
+```
+
+<!-- wodby:generated:end -->
+
 ## Deploy this stack
 
 Add this stack from the Wodby catalog, then configure its enabled services and
@@ -42,11 +55,3 @@ production environments.
 When replacing or renaming a stack service, update every related link target
 and derivative reference. Stack-local names and referenced service names are
 distinct identifiers.
-
-Validate the manifests with:
-
-```bash
-wodby stack validate-manifest stack.yml --org <org-id>
-```
-
-See the [stack manifest reference](https://wodby.com/docs/2.0/stacks/template/) and the [managed services index](https://github.com/wodby/services).
